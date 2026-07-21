@@ -31,6 +31,11 @@
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;scroll-behavior:smooth}
+/* Lenis CSS (nedostajao) — bez ovoga nativni smooth re-animira svaki
+   Lenisov frame i scroll zapinje ili stane. */
+html.lenis{scroll-behavior:auto!important}
+html.lenis,html.lenis body{height:auto}
+html.lenis [data-lenis-prevent]{overscroll-behavior:contain}
 body{
   background:var(--bg-base);
   color:var(--text);
